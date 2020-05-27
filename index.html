@@ -2,24 +2,37 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>ノートPCのWebAR</title>
+    <style>
+      .wrapper {
+        max-width: 640px;
+        margin: 0 auto;
+      }
+      .ar-model {
+        margin: 0 auto;
+        max-width: 600px;
+        height: 400px;
+      }
+      </style> 
   </head>
   <body>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js">    </script>
-    
-   <model-viewer  
-    ar
-    alt="ノートPC"
-    src="Lowpoly_Notebook_4.glb" 
-    ios-src="Lowpoly_Notebook_4.usdz" 
-    style="width:800px;height:1000px;"                  
-                  
-                  background-color="#70BCD1"
-                  shadow-intensity="0.7"
-                  camera-controls
-                  interaction-prompt="auto"
-                  auto-rotate ar magic-leap>
-               
-    </model-viewer>
+    <div class="wrapper">
+      <model-viewer
+        class="ar-model" 
+        ar
+        alt="ノートPC"
+        src="LaFerrari.glLowpoly_Notebook_4.glb" 
+        ios-src="Lowpoly_Notebook_4.usdz"
+        background-color="#70BCD1"
+        shadow-intensity="0.7"
+        camera-controls
+        interaction-prompt="auto"
+        auto-rotate
+        ar
+        magic-leap>
+      </model-viewer>
+    </div>
   </body>
 </html>
